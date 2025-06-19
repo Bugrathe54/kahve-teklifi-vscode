@@ -3,18 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sana Özel Bir Sürpriz!</title>
     <meta name="description" content="Sana özel bir kahve teklifi! Sürpriz bir mesaj ve geri dönüş seçenekleriyle dolu.">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon"> <link rel="apple-touch-icon" href="images/apple-touch-icon.png"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
+    
     <style>
         /* Genel Stiller ve Renk Değişkenleri */
         :root {
@@ -250,7 +243,7 @@
                 min-width: 60px;
             }
 
-    .time-unit span:last-child {
+            .time-unit span:last-child {
                 font-size: 0.7em;
             }
 
@@ -275,12 +268,51 @@
             .response-message p {
                 font-size: 1em;
             }
+            .signature {
+                font-size: 1em;
+            }
+            .countdown-section p {
+                font-size: 0.9em;
+            }
+            .countdown-timer {
+                flex-direction: column; /* Dikey hizalama */
+                align-items: center; /* Ortala */
+            }
+            .time-unit {
+                margin-bottom: 15px; /* Birimler arası boşluk */
+            }
+            .time-unit span:first-child {
+                min-width: 50px; /* Daha dar ekranlar için genişlik */
+            }
+            .time-unit span:last-child {
+                font-size: 0.6em; /* Daha küçük yazılar */
+            }
+            .btn-primary, .btn-secondary {
+                padding: 10px 20px; /* Daha küçük buton boyutu */
+                font-size: 0.9em; /* Küçük ekranlarda daha uygun boyut */
+            }
+            .signature {
+                font-size: 0.9em; /* Küçük ekranlarda daha uygun boyut */
+            }
+            .response-message h2 {
+                font-size: 1.5em; /* Küçük ekranlarda daha uygun boyut */
+            }
+            .response-message p {
+                font-size: 0.9em; /* Küçük ekranlarda daha uygun boyut */
+            }
+            .surprise-content .offer-text {
+                font-size: 1.2em; /* Küçük ekranlarda daha uygun boyut */   
+            }
+            .surprise-content .offer-question {
+                font-size: 1.3em; /* Küçük ekranlarda daha uygun boyut */
+            }
+            .countdown-section p {
+                font-size: 0.8em; /* Küçük ekranlarda daha uygun boyut */
+            }
         }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
     <div class="container">
         <div class="card">
             <h1 id="main-message">Bir Kahve Molasına Ne Dersin?</h1>
