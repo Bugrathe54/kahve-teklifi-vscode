@@ -1,7 +1,7 @@
 <style>
         /* Genel Stiller ve Renk Değişkenleri */
         :root {
-            --primary-color: #A0522D; /* Kahve tonu (Sienna) */
+            --primary-color: #A0522D; 
             --secondary-color: #D2B48C; /* Sütlü kahve tonu */
             --dark-bg: #282828; /* Koyu gri arka plan */
             --card-bg: #3C3C3C; /* Kart arka planı */
