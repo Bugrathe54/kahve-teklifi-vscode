@@ -1,0 +1,339 @@
+kahve-teklifi-vscode/css/style.css
+
+:root {
+    --primary-color: #A0522D; /* Kahve tonu (Sienna) */
+    --secondary-color: #D2B48C; /* Sütlü kahve tonu */
+    --dark-bg: #282828; /* Koyu gri arka plan */
+    --card-bg: #3C3C3C; /* Kart arka planı */
+    --text-color: #E0E0E0; /* Açık metin rengi */
+    --light-text-color: #B0B0B0; /* Daha açık metin rengi */
+    --border-color: #555; /* Kenarlık rengi */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ekran yüksekliğini kapla */
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box; /* Padding'in genişliği etkilememesi için */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    padding: 40px;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+    overflow: hidden; /* Animasyonlar için dışarı taşmaları engelle */
+}
+
+h1#main-message {
+    font-size: 2.8em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+p.subtitle {
+    font-size: 1.2em;
+    color: var(--light-text-color);
+    margin-bottom: 30px;
+}
+
+/* Geri Sayım Bölümü Stilleri */
+.countdown-section {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.countdown-section p {
+    font-size: 1em;
+    color: var(--light-text-color);
+    margin-bottom: 15px;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Birimler arası boşluk */
+}
+
+.time-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time-unit span:first-child { /* Sayıları temsil eden span */
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    background-color: #505050;
+    border-radius: 8px;
+    min-width: 70px; /* Sabit genişlik */
+}
+
+.time-unit span:last-child { /* "Gün", "Saat" gibi yazıları temsil eden span */
+    font-size: 0.8em;
+    text-transform: uppercase;
+    color: var(--light-text-color);
+}
+
+/* Buton Stilleri */
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease; /* Yumuşak geçiş efekti */
+    cursor: pointer;
+    border: none;
+    font-size: 1.1em;
+    margin: 0 10px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #8B4513; /* Hover'da daha koyu kahve */
+    border-color: #8B4513;
+    color: #fff;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+}
+
+/* Sürpriz İçerik Stilleri (Teklifin kendisi) */
+.surprise-content {
+    animation: fadeInScale 0.8s ease-out forwards; /* Ortaya çıkış animasyonu */
+}
+
+.surprise-content .offer-text {
+    font-size: 1.6em;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.surprise-content .offer-question {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    animation: bounceIn 1s ease-out 0.5s forwards; /* Teklife özel animasyon */
+    opacity: 0; /* Animasyon başlamadan önce gizli */
+}
+
+.response-buttons {
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.signature {
+    margin-top: 40px;
+    font-style: italic;
+    color: var(--light-text-color);
+    font-size: 1.1em;
+}
+
+/* Cevap Sonrası Mesajlar (Evet/Hayır) */
+.response-message {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.response-message i { /* İkonlar (kalp/üzgün yüz) */
+    font-size: 3em;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.response-message h2 {
+    font-size: 2.2em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.response-message p {
+    font-size: 1.1em;
+    color: var(--text-color);
+}
+
+/* --- Animasyon Tanımlamaları --- */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.1); opacity: 0; }
+    60% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+/* --- Duyarlı Tasarım (Responsive) Ayarlamaları --- */
+@media (max-width: 600px) { /* Ekran genişliği 600px ve altı için */
+    .card {
+        padding: 30px 20px;
+        margin: 0 15px; /* Küçük ekranlarda yan boşluk bırak */
+    }
+
+    h1#main-message {
+        font-size: 2em;
+    }
+
+    p.subtitle {
+        font-size: 1em;
+    }
+
+    .countdown-timer {
+        flex-wrap: wrap; /* Birimler alt alta geçsin */
+        gap: 15px;
+    }
+
+    .time-unit span:first-child {
+        font-size: 1.8em;
+        min-width: 60px;
+    }
+
+    .time-unit span:last-child {
+        font-size: 0.7em;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%; /* Butonlar tam genişlikte */
+        margin: 10px 0; /* Alt alta boşluk bırak */
+        font-size: 1em;
+    }
+
+    .surprise-content .offer-text {
+        font-size: 1.3em;
+    }
+
+    .surprise-content .offer-question {
+        font-size: 1.5em;
+    }
+
+    .response-message h2 {
+        font-size: 1.8em;
+    }
+
+    .response-message p {
+        font-size: 1em;
+    }
+    .signature {
+        font-size: 1em;
+    }
+    .countdown-section p {
+        font-size: 0.9em;
+    }
+    .countdown-timer {
+        flex-direction: column; /* Dikey hizalama */
+        align-items: center; /* Ortala */
+    }
+    .time-unit {
+        margin-bottom: 15px; /* Birimler arası boşluk */
+    }
+    .time-unit span:first-child {
+        min-width: 50px; /* Daha dar ekranlar için genişlik */
+    }
+    .time-unit span:last-child {
+        font-size: 0.6em; /* Daha küçük yazılar */
+    }
+    .btn-primary, .btn-secondary {
+        padding: 10px 20px; /* Daha küçük buton boyutu */
+        font-size: 0.9em; /* Küçük ekranlarda daha uygun boyut */
+    }
+    .signature {
+        font-size: 0.9em; /* Küçük ekran
+larda daha uygun boyut */
+    }
+    .response-message h2 {
+        font-size: 1.5em; /* Küçük ekranlarda daha uygun boyut */
+    }
+    .response-message p {
+        font-size: 0.9em; /* Küçük ekranlarda daha uygun boyut */
+    }
+    .surprise-content .offer-text {
+        font-size: 1.2em; /* Küçük ekranlarda daha uygun boyut */   
+    }
+    .surprise-content .offer-question {
+        font-size: 1.3em; /* Küçük ekranlarda daha uygun boyut */
+    }
+    .countdown-section p {
+        font-size: 0.8em; /* Küçük ekranlarda daha uygun boyut */
+    }
+    .countdown-timer {
+        flex-direction: column; /* Dikey hizalama */
+        align-items: center; /* Ortala */
+    }
+    .time-unit {
+        margin-bottom: 15px; /* Birimler arası boşluk */
+    }
+    .time-unit span:first-child {
+        min-width: 50px; /* Daha dar ekranlar için genişlik */
+    }
+    .time-unit span:last-child {
+        font-size: 0.6em; /* Daha küçük yazılar */
+    }
+    .btn-primary, .btn-secondary {
+        padding: 10px 20px; /* Daha küçük buton boyutu */
+        font-size: 0.9em; /* Küçük ekranlarda daha uygun boyut */
+    }
+    .signature {
+        font-size: 0.9em; /* Küçük ekranlarda daha uygun boyut */
+    }
+    .response-message h2 {
+        font-size: 1.5em; /* Küçük ekranlarda daha uygun boyut */
+    }
+    .response-message p {
+        font-size: 0.9em; /* Küçük ekranlarda daha uygun boyut */
+    }
+    .surprise-content .offer-text {
+        font-size: 1.2em; /* Küçük ekranlarda daha uygun boyut */
+    }
+    .surprise-content .offer-question {
+        font-size: 1.3em; /* Küçük ekranlarda daha uygun boyut */
+    }
+    .countdown-section p {
+        font-size: 0.8em; /* Küçük ekranlarda daha uygun boyut */
+    }
+   
+}
