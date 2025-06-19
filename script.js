@@ -28,15 +28,15 @@
             // DİKKAT: Ay değerleri 0'dan başlar (Ocak=0, Şubat=1, ..., Aralık=11)
             targetDate.setFullYear(2025);   // Yılı ayarla (2025)
             targetDate.setMonth(5);         // Ayı ayarla (Haziran = 5)
-            targetDate.setDate(27);         // Günü ayarla (27)
-            targetDate.setHours(18);        // Saati ayarla (18:00)
+            targetDate.setDate(20);         // Günü ayarla (27)
+            targetDate.setHours(9);        // Saati ayarla (18:00)
             targetDate.setMinutes(0);       // Dakikayı ayarla (0)
             targetDate.setSeconds(0);       // Saniyeyi ayarla (0)
             targetDate.setMilliseconds(0);  // Milisaniyeyi sıfırla
 
             // Teklif edeceğin kişinin ve senin adın
-            const girlName = "Ayşe"; // Buraya kahve teklif edeceğin kişinin **adını** yaz!
-            const yourName = "Can";  // Buraya **kendi** adını yaz!
+            const girlName = "Ecrin"; // Buraya kahve teklif edeceğin kişinin **adını** yaz!
+            const yourName = "Buğra";  // Buraya **kendi** adını yaz!
 
             // HTML içeriğindeki isimleri dinamik olarak güncelle
             document.querySelector('.offer-text').innerHTML = `Sevgili ${girlName},`;
