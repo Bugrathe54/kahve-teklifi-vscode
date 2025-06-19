@@ -19,19 +19,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // --- ÖNEMLİ AYARLAMALAR (BU KISIMLARI KENDİ BİLGİLERİNİZE GÖRE DÜZENLEYİN!) ---
 
-    // Hedef tarih ve saat: Sürprizin ne zaman ortaya çıkmasını istiyorsun?
-    // Şu anki tarih: 19 Haziran 2025, Perşembe, 19:45:21 +03 (Türkiye Saati)
+    
     const targetDate = new Date(); // Şu anki zamanla başlatıyoruz
 
     // Örneğin, 27 Haziran 2025, saat 18:00'e ayarlayalım
     // DİKKAT: Ay değerleri 0'dan başlar (Ocak=0, Şubat=1, ..., Aralık=11)
-    targetDate.setFullYear(2025);   // Yılı ayarla (2025)
-    targetDate.setMonth(5);         // Ayı ayarla (Haziran = 5)
-    targetDate.setDate(19);         // Günü ayarla (27)
-    targetDate.setHours(18);        // Saati ayarla (18:00)
-    targetDate.setMinutes(0);       // Dakikayı ayarla (0)
-    targetDate.setSeconds(0);       // Saniyeyi ayarla (0)
-    targetDate.setMilliseconds(0);  // Milisaniyeyi sıfırla
+    targetDate.setFullYear(2025);   
+    targetDate.setMonth(5);       
+    targetDate.setDate(19);    
+    targetDate.setHours(18);     
+    targetDate.setMinutes(0);      
+    targetDate.setSeconds(0);       
+    targetDate.setMilliseconds(0);  
 
     // Teklif edeceğin kişinin ve senin adın
     const girlName = "Ecrin"; // Buraya kahve teklif edeceğin kişinin **adını** yaz!
